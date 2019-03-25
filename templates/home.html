@@ -1,0 +1,98 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>机械资料网</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap-3.3.7/css/bootstrap.min.css' %}">
+    <script type="text/javascript" src="{% static 'jquery-1.12.4.min.js' %}">
+    </script>
+    <script type="text/javascript" src="{% static 'bootstrap-3.3.7/js/bootstrap.min.js'%}"></script>
+</head>
+
+
+<body>
+    <div class="navbar navbar-default " role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">机械资料网
+                </a>
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+               <ul class="nav navbar-nav">
+                    <li class="{% block nav_home_active %}active{% endblock %}"><a href="/">首页</a></li>
+                    <li class="{% block nav_cal_active %}{% endblock %}"><a href="/">计算</a></li>
+               </ul>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">目录</div>
+                    <div class="panel-body">
+                        <h4>零部件设计基础标准</h4>
+                        <div style="list-style-type: none;">
+                            <li><a href="/one">制图及制图符号</a></li>
+                            <li><a href="/two">公差与配合</a></li>
+                            <li><a href="/three">表面粗糙度</a></li>
+                        </div>
+                        <h4>连接与紧固</h4>
+                        <div style="list-style-type: none;">
+                            <li><a href="">螺纹及螺纹连接</a></li>
+                            <li><a href="">铆钉连接</a></li>
+                            <li><a href="">销、键和花键连接</a></li>
+                            <li><a href="">过盈联接</a></li>
+                        </div>
+                        <h4>轴及其连接</h4>
+                        <div style="list-style-type: none;">
+                            <li><a href="">轴</a></li>
+                            <li><a href="">联轴器</a></li>
+                            <li><a href="">离合器</a></li>
+                            <li><a href="">制动器</a></li>
+                        </div>
+                        <h4>轴承</h4>
+                        <div style="list-style-type: none;">
+                            <li><a href="">滑动轴承</a></li>
+                            <li><a href="">滚动轴承</a></li>
+                        </div >
+                        <h4>带、链传动</h4>
+                        <div style="list-style-type: none;">
+                            <li><a href="">带传动</a></li>
+                            <li><a href="">链传动</a></li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-sm-8 col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Panel heading without title</div>
+                    <div class="panel-body">
+
+                        <div class="jumbotron">
+                            <h1>Hello, world!</h1>
+                            <p>欢迎访问我的网站</p>
+                            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
